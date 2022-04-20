@@ -17,7 +17,8 @@ class PageAdd : Activity(){
 
 
     fun btnAdd(view: View) {
-        val myToast = Toast.makeText(this, "Clicked Add button", Toast.LENGTH_SHORT)
+        ///to do - addition function
+        val myToast = Toast.makeText(this, "To create additional (add) function", Toast.LENGTH_SHORT)
         myToast.show()
     }
 }

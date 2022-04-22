@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Basic</string>
+    <string name="btn_add">ADD</string>
+    <string name="num_sec">Enter Second Number</string>
+    <string name="tv_sec">Second Number"</string>
+    <string name="num_first">Enter First Number</string>
+    <string name="tv_first">First Number"</string>
 </resources>

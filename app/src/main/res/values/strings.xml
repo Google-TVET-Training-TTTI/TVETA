@@ -1,8 +1,26 @@
 <resources>
     <string name="app_name">Basic</string>
+
+    //Addition
     <string name="btn_add">ADD</string>
     <string name="num_sec">Enter Second Number</string>
     <string name="tv_sec">Second Number"</string>
     <string name="num_first">Enter First Number</string>
     <string name="tv_first">First Number"</string>
+
+    //Voter Register
+    <string name="register_here">Register Here</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_login">Login</string>
+    <string name="first_name">First Name"</string>
+    <string name="full_name">Full Name"</string>
+    <string name="Password">Password</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="user_name">UserName</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="term_cond">I have read and accepted the Terms and Conditions</string>
+    <string name="rem_me">Remember me</string>
+    <string name="back_login">Login if already registered</string>
+    <string name="fgt_pass">Forgot your Password?</string>
 </resources>

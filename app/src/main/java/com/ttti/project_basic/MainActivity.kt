@@ -1,7 +1,9 @@
 package com.ttti.project_basic
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val  btn: Button = findViewById(R.id.mybutton)
+        val btnPage1 = findViewById(R.id.btnPage) as Button
         btn.setOnClickListener {
             val myToast = Toast.makeText(this, "Executing", Toast.LENGTH_SHORT)
             myToast.show()
@@ -42,6 +45,9 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
+        btnPage1.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this@MainActivity, PageAdd::class.java)
+            startActivity(intent)
+        })
     }
 }

@@ -61,4 +61,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Click to print Text entered" />
+
+    <Button
+            android:id="@+id/btnPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD VALUES"
+            android:textStyle="bold"
+            android:onClick="btnPage1"
+            android:layout_marginTop="20sp"/>
 </LinearLayout>

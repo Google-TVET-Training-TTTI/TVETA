@@ -1,2 +1,2 @@
-# Voting
-An app to simplify voting processes in institutions
+# Case Study App - Voting App
+An app to show case Kotlin operations,functions,classes in a real world application

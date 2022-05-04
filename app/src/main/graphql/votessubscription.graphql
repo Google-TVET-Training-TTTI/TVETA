@@ -1,0 +1,18 @@
+subscription newVote($id: String) {
+data: newVote(id: $id) {
+id
+category {
+id
+category
+}
+candidate {
+_id
+firstName
+lastName
+email
+}
+votes
+createdAt
+updatedAt
+}
+}

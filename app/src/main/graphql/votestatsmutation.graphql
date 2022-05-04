@@ -1,0 +1,21 @@
+mutation CreateVoteStats($user: String!, $vote: String!) {
+data: createVoteStats(input: { user: $user, vote: $vote }) {
+... on CreateError {
+__typename
+created
+message
+}
+... on VoteStats {
+id
+user {
+_id
+firstName
+lastName
+email
+}
+vote
+createdAt
+updatedAt
+}
+}
+}

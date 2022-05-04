@@ -1,0 +1,17 @@
+query GetVoteStat($user: String!) {
+data: getVoteStat(user: $user) {
+nodes {
+id
+user {
+_id
+firstName
+lastName
+email
+}
+vote
+createdAt
+updatedAt
+}
+count
+}
+}

@@ -1,0 +1,13 @@
+query GetCategories(
+$limit: Int
+$filter: CategoryInput
+$sort: CategorySortInput
+) {
+data: getCategories(limit: $limit, filter: $filter, sort: $sort) {
+nodes {
+id
+category
+}
+count
+}
+}

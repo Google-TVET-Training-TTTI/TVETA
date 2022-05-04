@@ -1,0 +1,35 @@
+mutation CreateUser(
+$phoneNumber: String!
+$firstName: String!
+$lastName: String!
+$password: String!
+$email: String!
+) {
+data: createUser(
+input: {
+phoneNumber: $phoneNumber
+firstName: $firstName
+lastName: $lastName
+password: $password
+email: $email
+}
+) {
+... on CreateError {
+__typename
+message
+}
+... on User {
+id
+phoneNumber
+email
+firstName
+lastName
+dateOfBirth
+gender
+otpCode
+accountStatus
+createdAt
+updatedAt
+}
+}
+}

@@ -1,73 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.drawerlayout.widget.DrawerLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/white">
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TTTI Basic Learning Project"
-            android:gravity="center_horizontal"
-            android:textSize="30sp"
-    />
-    <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp">
-        <ImageView
-                android:id="@+id/calendar_prev_button"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:src="@drawable/thikatech"/>
-    </RelativeLayout>
-    <LinearLayout
-            android:id="@+id/calendar_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
 
-
-        <TextView
-                android:id="@+id/answer"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:textColor="#222222"
-                android:text="My Text Input"
-                android:textSize="30sp"/>
-
-    </LinearLayout>
-    <Button android:id="@+id/mybutton"
+    <include
+            android:id="@+id/app_bar_main"
+            layout="@layout/app_bar_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="This is a Button" />
+            android:layout_height="match_parent"/>
 
-    <EditText
-            android:id="@+id/edittext"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"/>
-
-    <Button android:id="@+id/mybuttonedit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Click to print Text entered" />
-
-    <Button
-            android:id="@+id/btnPage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ADD VALUES"
-            android:textStyle="bold"
-            android:onClick="btnPage1"
-            android:layout_marginTop="20sp"/>
-</LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/activity_main_drawer"/>
+</androidx.drawerlayout.widget.DrawerLayout>

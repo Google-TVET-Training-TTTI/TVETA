@@ -1,0 +1,27 @@
+mutation CreateVotes($category: String!, $candidate: String!, $votes: String!) {
+data: createVotes(
+input: { category: $category, candidate: $candidate, votes: $votes }
+) {
+... on CreateError {
+__typename
+created
+message
+}
+... on Votes {
+id
+category {
+id
+category
+}
+candidate {
+_id
+firstName
+lastName
+email
+}
+votes
+createdAt
+updatedAt
+}
+}
+}

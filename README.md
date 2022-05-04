@@ -1,2 +1,2 @@
-# TVETA
-A simple project to learn basic and advanced Kotlin programming skills
+# Voting
+An app to simplify voting processes in institutions

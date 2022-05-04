@@ -1,0 +1,18 @@
+query GetUser($email: String!, $password: String) {
+data: getUser(email: $email, password: $password) {
+nodes {
+id
+phoneNumber
+email
+firstName
+lastName
+dateOfBirth
+gender
+otpCode
+accountStatus
+createdAt
+updatedAt
+}
+count
+}
+}

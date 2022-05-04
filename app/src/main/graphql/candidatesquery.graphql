@@ -1,0 +1,21 @@
+query GetCandidate(
+$limit: Int
+$filter: CandidateInput
+$sort: CandidateSortInput
+) {
+data: getCandidates(limit: $limit, filter: $filter, sort: $sort) {
+nodes {
+id
+category {
+id
+category
+}
+candidate {
+id
+firstName
+lastName
+}
+}
+count
+}
+}

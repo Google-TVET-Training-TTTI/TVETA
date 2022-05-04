@@ -1,0 +1,23 @@
+mutation CreateCandidate($candidate: String!, $category: String!) {
+data: createCandidate(input: { candidate: $candidate, category: $category }) {
+... on CreateError {
+__typename
+created
+message
+}
+... on Candidate {
+id
+category {
+id
+category
+}
+candidate {
+id
+firstName
+lastName
+}
+createdAt
+updatedAt
+}
+}
+}

@@ -1,0 +1,6 @@
+query GetRegisteredVoted {
+  data: getRegisteredVoted {
+  registered
+  voted
+}
+}

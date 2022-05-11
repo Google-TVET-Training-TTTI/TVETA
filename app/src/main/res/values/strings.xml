@@ -16,10 +16,10 @@
 
     <!--<string name="graphql_server">http://192.168.1.199:4500/graphql/</string>
     <string name="graphql_server_ws">ws://192.168.1.199:4500/graphql</string>-->
-
+    
     <string name="graphql_server">https://core-ict-consultancy-api.herokuapp.com/graphql/</string>
     <string name="graphql_server_ws">ws://core-ict-consultancy-api.herokuapp.com/graphql</string>
-
+    
     <string name="large_text">
         "Material is the metaphor.\n\n"
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."

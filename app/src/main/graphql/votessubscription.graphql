@@ -1,5 +1,6 @@
 subscription newVote($id: String) {
 data: newVote(id: $id) {
+nodes {
 id
 category {
 id
@@ -14,5 +15,6 @@ email
 votes
 createdAt
 updatedAt
+}
 }
 }

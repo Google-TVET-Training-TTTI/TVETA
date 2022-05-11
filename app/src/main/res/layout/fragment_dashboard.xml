@@ -5,7 +5,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.fragments.DashboardFragment">
-
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/mainLayout"
@@ -23,13 +22,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
                 <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1.0">
-
-
                     <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -41,18 +37,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10.00dp"
                                 android:orientation="vertical">
-
-                            <!-- <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_gravity="center_horizontal"
-
-                                android:text="Subscription Purchase history" android:textSize="20dp"/>
-
-                            -->
-
-
                             <TextView
                                     android:id="@+id/txtUserName"
                                     android:layout_width="match_parent"
@@ -70,7 +54,6 @@
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
 
-
                             <View
                                     android:layout_width="100.00dp"
                                     android:layout_height="5dp"
@@ -79,7 +62,6 @@
 
                         </LinearLayout>
 
-
                         <LinearLayout
                                 style="@style/relative_CardLook"
                                 android:layout_width="match_parent"
@@ -87,7 +69,6 @@
                                 android:layout_marginTop="10dp"
                                 android:orientation="vertical"
                                 android:padding="10dp">
-
                             <TextView
                                     android:id="@+id/lbl_account_date"
                                     android:layout_width="match_parent"
@@ -103,7 +84,6 @@
                                     android:visibility="visible"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent" />
-
                             <com.github.mikephil.charting.charts.PieChart
                                     android:id="@+id/piechart"
                                     android:layout_width="match_parent"
@@ -111,10 +91,7 @@
                                     android:layout_margin="2dp"
                                     android:textColor="@android:color/background_dark"
                             />
-
                         </LinearLayout>
-
-
                         <LinearLayout
                                 style="@style/relative_CardLook"
                                 android:layout_width="match_parent"
@@ -145,23 +122,42 @@
 
                             <RelativeLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="300dp">
-
+                                    android:layout_height="fill_parent">
+    
                                 <HorizontalScrollView
                                         android:layout_width="fill_parent"
                                         android:layout_height="fill_parent"
                                         android:id="@+id/hsview"
                                         android:fillViewport="true">
-
-                                    <com.github.mikephil.charting.charts.BarChart
-                                            android:id="@+id/barchart"
+                                    <LinearLayout
+                                            android:id="@+id/layDynContainer"
                                             android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_above="@+id/seekBar1"/>
-
-
+                                            android:layout_height="fill_parent"
+                                            android:layout_marginStart="16dp"
+                                            android:layout_marginTop="16dp"
+                                            android:layout_marginEnd="16dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:orientation="vertical"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+                                    <!--<Button
+                                            android:id="@+id/btnTest"
+                                            style="@style/Base.TextAppearance.AppCompat.Body1"
+                                            android:layout_width="140dp"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="0dp"
+                                            android:background="@color/black"
+                                            android:clickable="true"
+                                            android:text="Ok"
+                                            android:textAllCaps="false"
+                                            android:textColor="#FFFF"
+                                            android:textSize="28sp"
+                                            android:textStyle="normal"
+                                            app:backgroundTintMode="src_in" />-->
+                                    </LinearLayout>
                                 </HorizontalScrollView>
-
                                <!-- <ProgressBar
                                         android:id="@+id/progress_bar"
                                         android:layout_width="match_parent"
@@ -170,7 +166,6 @@
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"/>-->
-
                             </RelativeLayout>
                         </LinearLayout>
                     </LinearLayout>

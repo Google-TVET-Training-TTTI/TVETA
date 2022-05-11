@@ -93,7 +93,7 @@
                 "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "VotesInput",
+                  "name": "VotesFilterInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -105,6 +105,33 @@
                   "kind": "INPUT_OBJECT",
                   "name": "VoteSortInput",
                   "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "VotesConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "getVotesByCategory",
+            "description": "",
+            "args": [
+              {
+                "name": "category",
+                "description": "",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
                 },
                 "defaultValue": null
               }
@@ -585,40 +612,12 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "VotesInput",
+        "name": "VotesFilterInput",
         "description": "",
         "fields": null,
         "inputFields": [
           {
             "name": "category",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "candidate",
-            "description": "",
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "votes",
             "description": "",
             "type": {
               "kind": "NON_NULL",
@@ -2037,6 +2036,59 @@
         ]
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "VotesInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "category",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "candidate",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "votes",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "UNION",
         "name": "CreateVotesPayload",
         "description": "",
@@ -2121,7 +2173,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Votes",
+              "name": "VotesConnection",
               "ofType": null
             },
             "isDeprecated": false,

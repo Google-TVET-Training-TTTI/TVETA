@@ -1,5 +1,29 @@
-query GetVotes($limit: Int, $filter: VotesInput, $sort: VoteSortInput) {
+query GetVotes($limit: Int, $filter: VotesFilterInput, $sort: VoteSortInput) {
 data: getVotes(limit: $limit, filter: $filter, sort: $sort) {
+nodes {
+id
+category {
+id
+category
+}
+candidate {
+_id
+firstName
+lastName
+email
+}
+votes
+createdAt
+updatedAt
+}
+count
+}
+}
+
+
+
+query GetVotesByCategory($category: String!) {
+data: getVotesByCategory(category: $category) {
 nodes {
 id
 category {
